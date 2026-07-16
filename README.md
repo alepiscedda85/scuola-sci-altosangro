@@ -5,9 +5,18 @@ Nuovo sito React prerenderizzato della Scuola Sci Alto Sangro.
 ## Avvio locale
 
 ```bash
+nvm use
 npm install
 npm run dev
 ```
+
+Se il terminale risponde `node: command not found` o `npm: command not found`, avvia direttamente:
+
+```bash
+zsh ./start-local.command
+```
+
+Lo script carica NVM, seleziona Node 22 e apre il server Vite.
 
 ## Verifica e build
 
