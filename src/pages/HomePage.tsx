@@ -2,7 +2,6 @@ import { ArrowDown, Baby, MapPin, ShieldCheck, Sparkles } from 'lucide-react'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonLink } from '../components/common/ButtonLink'
-import { BrandBadge } from '../components/common/BrandBadge'
 import { SectionHeading } from '../components/common/SectionHeading'
 import { JsonLd } from '../components/seo/JsonLd'
 import { StoryJourney } from '../components/sections/StoryJourney'
@@ -17,7 +16,6 @@ export function HomePage() {
   const structured = { '@context': 'https://schema.org', '@type': ['LocalBusiness', 'SportsActivityLocation'], name: site.name, url: `${site.domain}/`, image: `${site.domain}/images/hero.jpg`, telephone: site.phone, email: site.email, address: { '@type': 'PostalAddress', streetAddress: 'Via Aremogna s.n.c.', postalCode: '67037', addressLocality: 'Roccaraso', addressRegion: 'AQ', addressCountry: 'IT' }, areaServed: 'Alto Sangro – Roccaraso' }
   return <div ref={storyRef}>
     <JsonLd data={structured} />
-    <BrandBadge />
     <section className="story-hero relative flex min-h-screen items-end overflow-hidden bg-ink pb-12 pt-36 text-white lg:pb-20">
       <img src="/images/hero.jpg" alt="Sciatore sulle piste innevate del comprensorio Alto Sangro" className="story-hero-image absolute inset-0 h-full w-full object-cover will-change-transform" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/65 to-transparent" />
