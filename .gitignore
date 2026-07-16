@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.prerender/
+playwright-report/
+test-results/
+.env
+.DS_Store
+*.log
+.vscode/
+.qodo/

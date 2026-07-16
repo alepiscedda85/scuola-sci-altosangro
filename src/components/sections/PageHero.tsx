@@ -1,0 +1,7 @@
+export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; title: string; text: string; image: string }) {
+  return <section className="relative flex min-h-[66vh] items-end overflow-hidden bg-ink pb-16 pt-36 text-white lg:pb-24">
+    <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+    <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
+    <div className="container-site relative"><p className="eyebrow !text-sun">{eyebrow}</p><h1 className="display mt-4 max-w-4xl text-5xl sm:text-6xl lg:text-8xl">{title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{text}</p></div>
+  </section>
+}

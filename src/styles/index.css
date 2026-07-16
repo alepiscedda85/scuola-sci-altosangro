@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #08243b; background: #f8faf9; font-synthesis: none; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; font-family: Inter, system-ui, sans-serif; background: #f8faf9; }
+body, button, input, select, textarea { font-family: Inter, system-ui, sans-serif; }
+::selection { background: #f1cf28; color: #08243b; }
+:focus-visible { outline: 3px solid #f1cf28; outline-offset: 3px; }
+.container-site { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; }
+.eyebrow { font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: #145c57; }
+.display { font-family: Manrope, Inter, sans-serif; font-weight: 800; letter-spacing: -.055em; line-height: .98; }
+.section-pad { padding-block: clamp(4.5rem, 9vw, 8rem); }
+.mountain-grid { background-image: linear-gradient(rgba(8,36,59,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(8,36,59,.04) 1px, transparent 1px); background-size: 48px 48px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
