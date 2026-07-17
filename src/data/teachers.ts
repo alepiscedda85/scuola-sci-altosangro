@@ -3,7 +3,7 @@ export type Teacher = {
   image: string
 }
 
-const imagePath = '/images/teachers/'
+const imagePath = publicAsset('/images/teachers/')
 
 export const teachers: Teacher[] = [
   { name: 'Loris Pompei', image: `${imagePath}pompei-loris.jpg` },
@@ -24,3 +24,4 @@ export const teachers: Teacher[] = [
   { name: 'Samuel Cordisco', image: `${imagePath}teacher-placeholder.jpg` },
   { name: 'Gianluca Mancinelli', image: `${imagePath}teacher-placeholder.jpg` },
 ]
+import { publicAsset } from '../lib/assets'

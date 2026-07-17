@@ -1,4 +1,5 @@
 import { site } from '../data/site'
+import { publicAsset } from './assets'
 
 export type SeoData = { title: string; description: string; path: string; image?: string; noindex?: boolean }
 
@@ -31,6 +32,6 @@ export function headMarkup(data: SeoData) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${data.title}">
 <meta name="twitter:description" content="${data.description}">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="${publicAsset('/site.webmanifest')}">
 <meta name="theme-color" content="#08243b">`
 }

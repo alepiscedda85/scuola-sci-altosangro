@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { publicAsset } from '../../lib/assets'
 
 export function LogoExperience() {
   const mountRef = useRef<HTMLDivElement>(null)
@@ -33,7 +34,7 @@ export function LogoExperience() {
       rim.position.set(-4, 1, 4)
       scene.add(rim)
 
-      new loaderModule.GLTFLoader().load('/models/logo.glb', (gltf) => {
+      new loaderModule.GLTFLoader().load(publicAsset('/models/logo.glb'), (gltf) => {
         if (disposed) return
         model = gltf.scene
         const bounds = new THREE.Box3().setFromObject(model)
@@ -89,6 +90,6 @@ export function LogoExperience() {
   }, [])
 
   return <div ref={mountRef} className="relative h-full min-h-[360px] w-full" aria-hidden="true">
-    <img src="/images/logo.svg" alt="" className={`absolute left-1/2 top-1/2 w-56 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ${ready ? 'opacity-0' : 'opacity-70'}`} />
+    <img src={publicAsset('/images/logo.svg')} alt="" className={`absolute left-1/2 top-1/2 w-56 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ${ready ? 'opacity-0' : 'opacity-70'}`} />
   </div>
 }

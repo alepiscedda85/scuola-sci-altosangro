@@ -5,7 +5,7 @@ import { App } from './app/App'
 import './styles/index.css'
 
 const container = document.getElementById('root')!
-const app = <StrictMode><BrowserRouter><App /></BrowserRouter></StrictMode>
+const app = <StrictMode><BrowserRouter basename={import.meta.env.BASE_URL}><App /></BrowserRouter></StrictMode>
 
 // Production pages contain prerendered elements; Vite dev serves only the
 // placeholder comment and therefore needs a normal client render.
